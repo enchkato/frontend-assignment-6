@@ -1,37 +1,37 @@
 $(document).ready(function() {
     $("#btn-hide").click(function() {
-        $("#vis-text").hide(400);
+        $("#vis-text").hide();
     });
 
     $("#btn-show").click(function() {
-        $("#vis-text").show(400);
+        $("#vis-text").show();
     });
 
     $("#btn-toggle").click(function() {
-        $("#vis-text").toggle(400);
+        $("#vis-text").toggle();
     });
 
     $("#btn-fade-out").click(function() {
-        $("#fade-img").fadeOut(500);
+        $("#fade-img").fadeOut();
     });
 
     $("#btn-fade-in").click(function() {
-        $("#fade-img").fadeIn(500);
+        $("#fade-img").fadeIn();
     });
 
     $("#btn-fade-toggle").click(function() {
-        $("#fade-img").fadeToggle(500);
+        $("#fade-img").fadeToggle();
     });
 
     $("#btn-slide-up").click(function() {
-        $("#slide-box").slideUp(400);
+        $("#slide-box").slideUp();
     });
 
     $("#btn-slide-down").click(function() {
-        $("#slide-box").slideDown(400);
+        $("#slide-box").slideDown();
     });
 
     $("#btn-slide-toggle").click(function() {
-        $("#slide-box").slideToggle(400);
+        $("#slide-box").slideToggle();
     });
 });

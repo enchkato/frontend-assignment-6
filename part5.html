@@ -3,74 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 6 | Part 5: Mini Project Accordion</title>
+    <title>Assignment 6 | Part 5</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">jQuery Assignment 6</a>
+            <a class="navbar-brand" href="index.html">Assignment 6</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Part 1: Selectors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="part2.html">Part 2: Effects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="part3.html">Part 3: DOM</a></li>
-                    <li class="nav-item"><a class="nav-link" href="part4.html">Part 4: Animations</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="part5.html">Part 5: Mini Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Part 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="part2.html">Part 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="part3.html">Part 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="part4.html">Part 4</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="part5.html">Part 5</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <main class="container my-5">
-        <div class="text-center mb-5">
-            <h1>Mini Project: Interactive Accordion Menu</h1>
-            <p class="text-muted">Built with jQuery selectors and smooth slide animations (.slideUp, .slideDown).</p>
+        <div class="text-center mb-4">
+            <h2>Part 5: Accordion Menu</h2>
+            <p class="text-muted">Frequently asked questions and project notes.</p>
         </div>
 
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <div class="accordion-item-custom">
                     <div class="accordion-header-custom">
-                        <span>1. What is jQuery?</span>
+                        <span>Project Information</span>
                         <span class="icon">&plus;</span>
                     </div>
                     <div class="accordion-content-custom">
-                        jQuery is a fast, small, and feature-rich JavaScript library. It makes HTML document traversal, manipulation, event handling, and animation much simpler with an easy-to-use API.
+                        Assignment 6 done by Kudaibergen Temirlan from SE-2528. This page shows an accordion menu built with jQuery.
                     </div>
                 </div>
 
                 <div class="accordion-item-custom">
                     <div class="accordion-header-custom">
-                        <span>2. Why use $(document).ready()?</span>
+                        <span>How does this accordion work?</span>
                         <span class="icon">&plus;</span>
                     </div>
                     <div class="accordion-content-custom">
-                        The <code>$(document).ready()</code> event ensures that all DOM elements are fully loaded and accessible before any jQuery code executes, preventing errors when trying to select non-existent nodes.
+                        When you click a title, jQuery checks if the content is visible. If it is hidden, it closes other open tabs with slideUp and opens this one with slideDown.
                     </div>
                 </div>
 
                 <div class="accordion-item-custom">
                     <div class="accordion-header-custom">
-                        <span>3. How does .animate() work?</span>
+                        <span>Used libraries</span>
                         <span class="icon">&plus;</span>
                     </div>
                     <div class="accordion-content-custom">
-                        The <code>.animate()</code> method performs custom animations on numeric CSS properties such as width, height, opacity, left, and top. Elements must have <code>position: relative</code>, <code>absolute</code>, or <code>fixed</code> to animate their coordinates.
+                        Bootstrap 5.3 CDN for layout and responsive navbar, plus jQuery 3.7.1 CDN for DOM selection and slide animations.
                     </div>
                 </div>
 
                 <div class="accordion-item-custom">
                     <div class="accordion-header-custom">
-                        <span>4. How do jQuery Effects improve UX?</span>
+                        <span>Submission details</span>
                         <span class="icon">&plus;</span>
                     </div>
                     <div class="accordion-content-custom">
-                        Methods like <code>.fadeIn()</code>, <code>.fadeOut()</code>, and <code>.slideToggle()</code> provide smooth visual feedback for user interactions, avoiding abrupt screen changes and improving page usability.
+                        The repository is hosted on GitHub and published through GitHub Pages for live viewing.
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    const box = $("#anim-target");
+    const box = $("#anim-box");
 
-    function resetBox() {
+    function reset() {
         box.stop(true, true).css({
             "top": "20px",
             "left": "20px",
@@ -11,35 +11,35 @@ $(document).ready(function() {
         });
     }
 
-    $("#btn-anim-reset").click(function() {
-        resetBox();
+    $("#btn-reset").click(function() {
+        reset();
     });
 
-    $("#btn-basic-anim").click(function() {
-        resetBox();
+    $("#btn-basic").click(function() {
+        reset();
         box.animate({
-            left: "250px",
-            width: "120px",
-            height: "120px"
+            left: "220px",
+            width: "110px",
+            height: "110px"
+        }, 600);
+    });
+
+    $("#btn-seq").click(function() {
+        reset();
+        box.animate({ left: "260px" }, 400)
+           .animate({ top: "160px" }, 400)
+           .animate({ width: "40px", height: "40px" }, 300)
+           .animate({ left: "20px", top: "20px", width: "70px", height: "70px" }, 500);
+    });
+
+    $("#btn-comb").click(function() {
+        reset();
+        box.animate({
+            left: "180px",
+            top: "100px",
+            width: "130px",
+            height: "130px",
+            opacity: 0.4
         }, 800);
-    });
-
-    $("#btn-seq-anim").click(function() {
-        resetBox();
-        box.animate({ left: "300px" }, 600)
-           .animate({ top: "180px" }, 600)
-           .animate({ width: "40px", height: "40px" }, 500)
-           .animate({ left: "20px", top: "20px", width: "70px", height: "70px" }, 700);
-    });
-
-    $("#btn-comb-anim").click(function() {
-        resetBox();
-        box.animate({
-            left: "200px",
-            top: "120px",
-            width: "140px",
-            height: "140px",
-            opacity: 0.3
-        }, 1000);
     });
 });

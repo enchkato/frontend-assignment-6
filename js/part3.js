@@ -1,49 +1,60 @@
 $(document).ready(function() {
-    let itemCounter = 2;
+    let count = 2;
 
     $("#btn-append").click(function() {
-        itemCounter++;
-        $("#dynamic-list").append('<li class="list-group-item">Appended Item ' + itemCounter + '</li>');
+        count++;
+        $("#dynamic-list").append('<li class="list-group-item">Item ' + count + '</li>');
     });
 
     $("#btn-prepend").click(function() {
-        itemCounter++;
-        $("#dynamic-list").prepend('<li class="list-group-item">Prepended Item ' + itemCounter + '</li>');
+        count++;
+        $("#dynamic-list").prepend('<li class="list-group-item">Item ' + count + '</li>');
     });
 
     $("#btn-remove").click(function() {
-        $("#dynamic-list li:last-child").remove();
-    });
-
-    let currentImgState = 1;
-    $("#btn-change-img").click(function() {
-        if (currentImgState === 1) {
-            $("#attr-img").attr("src", "https://picsum.photos/id/1062/240/130");
-            currentImgState = 2;
-        } else {
-            $("#attr-img").attr("src", "https://picsum.photos/id/1025/240/130");
-            currentImgState = 1;
+        $("#dynamic-list li").last().remove();
+        if (count > 0) {
+            count--;
         }
     });
 
-    let currentLinkState = 1;
-    $("#btn-change-link").click(function() {
-        if (currentLinkState === 1) {
-            $("#attr-link").attr("href", "https://github.com").text("Visit GitHub");
-            currentLinkState = 2;
+    let imgToggle = false;
+    $("#btn-change-img").click(function() {
+        if (!imgToggle) {
+            $("#attr-img").attr("src", "https://picsum.photos/id/1062/240/130");
+            imgToggle = true;
         } else {
-            $("#attr-link").attr("href", "https://astanait.edu.kz").text("Visit AITU Website");
-            currentLinkState = 1;
+            $("#attr-img").attr("src", "https://picsum.photos/id/1025/240/130");
+            imgToggle = false;
+        }
+    });
+
+    let linkToggle = false;
+    $("#btn-change-link").click(function() {
+        if (!linkToggle) {
+            $("#attr-link").attr("href", "https://github.com").text("Open GitHub");
+            linkToggle = true;
+        } else {
+            $("#attr-link").attr("href", "https://astanait.edu.kz").text("Open AITU");
+            linkToggle = false;
         }
     });
 
     $("#form-name").on("keyup", function() {
-        let nameVal = $(this).val();
-        $("#live-name-out").text(nameVal !== "" ? nameVal : "-");
+        let val = $(this).val();
+        if (val.length > 0) {
+            $("#live-name-out").text(val);
+        } else {
+            $("#live-name-out").text("-");
+        }
     });
 
     $("#form-email").on("keyup", function() {
-        let emailVal = $(this).val();
-        $("#live-email-out").text(emailVal !== "" ? emailVal : "-");
+        let val = $(this).val();
+        if (val.length > 0) {
+            $("#live-email-out").text(val);
+        } else {
+            $("#live-email-out").text("-");
+        }
     });
 });

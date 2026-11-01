@@ -3,57 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 6 | Part 4: Animations</title>
+    <title>Assignment 6 | Part 4</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">jQuery Assignment 6</a>
+            <a class="navbar-brand" href="index.html">Assignment 6</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Part 1: Selectors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="part2.html">Part 2: Effects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="part3.html">Part 3: DOM</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="part4.html">Part 4: Animations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="part5.html">Part 5: Mini Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Part 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="part2.html">Part 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="part3.html">Part 3</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="part4.html">Part 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="part5.html">Part 5</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <main class="container my-5">
-        <h1 class="mb-4">Part 4: jQuery Animations (.animate)</h1>
+        <h2 class="mb-4">Part 4: Animations</h2>
 
         <div class="card shadow-sm border-0 mb-4">
             <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Tasks 8, 9 &amp; 10: Animation Sandbox</h5>
-                <button type="button" class="btn btn-sm btn-outline-light" id="btn-anim-reset">Reset Box Position</button>
+                <h5 class="mb-0">Box Controls</h5>
+                <button type="button" class="btn btn-sm btn-outline-light" id="btn-reset">Reset</button>
             </div>
             <div class="card-body">
                 <div class="anim-area mb-3">
-                    <div id="anim-target" class="anim-box"></div>
+                    <div id="anim-box" class="anim-box"></div>
                 </div>
 
                 <div class="row g-2">
                     <div class="col-12 col-md-4">
-                        <button type="button" class="btn btn-primary w-100" id="btn-basic-anim">
-                            Task 8: Basic Animation (Enlarge &amp; Move)
-                        </button>
+                        <button type="button" class="btn btn-primary w-100" id="btn-basic">Task 8: Basic</button>
                     </div>
                     <div class="col-12 col-md-4">
-                        <button type="button" class="btn btn-success w-100" id="btn-seq-anim">
-                            Task 9: Sequential (Right &rarr; Down &rarr; Shrink &rarr; Back)
-                        </button>
+                        <button type="button" class="btn btn-success w-100" id="btn-seq">Task 9: Step by Step</button>
                     </div>
                     <div class="col-12 col-md-4">
-                        <button type="button" class="btn btn-warning w-100" id="btn-comb-anim">
-                            Task 10: Combined (Opacity, Size, Move)
-                        </button>
+                        <button type="button" class="btn btn-warning w-100 text-white" id="btn-comb">Task 10: Combined</button>
                     </div>
                 </div>
             </div>

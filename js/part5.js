@@ -1,17 +1,17 @@
 $(document).ready(function() {
     $(".accordion-header-custom").click(function() {
-        const currentContent = $(this).next(".accordion-content-custom");
-        const currentIcon = $(this).find(".icon");
+        const content = $(this).next(".accordion-content-custom");
+        const icon = $(this).find(".icon");
 
-        if (currentContent.is(":visible")) {
-            currentContent.slideUp(300);
-            currentIcon.html("&plus;");
+        if (content.is(":visible")) {
+            content.slideUp(250);
+            icon.html("&plus;");
         } else {
-            $(".accordion-content-custom").slideUp(300);
+            $(".accordion-content-custom").slideUp(250);
             $(".accordion-header-custom .icon").html("&plus;");
 
-            currentContent.slideDown(300);
-            currentIcon.html("&minus;");
+            content.slideDown(250);
+            icon.html("&minus;");
         }
     });
 });
